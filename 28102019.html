@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .container{
+                position:relative;
+            }
+            .sun{
+                position:absolute;
+                top:250px;
+                left:250px;
+            }
+            #earth1{
+                position:absolute;
+                top:250px;
+                left:400px;
+            }
+            #earth2{
+                position:absolute;
+                top:250px;
+                left:400px;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                var gak = 0;
+                var int_x = 300;
+                setInterval( function () {
+                    var earth1 = document.getElementById('earth1');
+                    //alert(earth);
+                    earth1.style.left = (int_x + 200 * Math.cos(gak)) + 'px';
+                    earth1.style.top = (int_x + 200 * Math.sin(gak)) + 'px';
+                    console.log(gak);
+                    gak++;
+                }, 500);
+        
+                setInterval(function () {
+                    var earth2 = document.getElementById('earth2');
+                    //alert(earth);
+                    earth2.style.left = (int_x + 200 * Math.cos(gak)) + 'px';
+                    earth2.style.top = (int_x + 200 * Math.sin(gak)) + 'px';
+                    console.log(gak);
+                    gak++;
+                }, 1000);
+            }
+        </script>
+        </head>
+        <body>
+        
+            <div class="container">
+                <div class="sun">
+                    <img width="80px"src="https://images.squarespace-cdn.com/content/v1/53e5e8b4e4b0f39bef5e536c/1547215224537-CKW4KQXKD9Y2D28HJCSW/ke17ZwdGBToddI8pDm48kLPswmMOqQZ9-Q6KHLjvbpZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UVTQf06wQztZgT3ocQ_Nttc9pRe5bgfSgFgLIpbw9lM5m7cT0R_dexc_UL_zbpz6JQ/sun.gif?format=2500w" />
+                </div>
+                <div id="earth1">
+                    <img width="60px" src="https://i.gifer.com/DNst.gif" />
+                </div>
+                <div id="earth2">
+                        <img width="60px" src="https://i.gifer.com/DNst.gif" />
+                   <!--<img width="60px" src="https://media0.giphy.com/media/aN9GqoR7OD3nq/giphy.webp?cid=790b7611582cd43f6488a90f77c30566fcbdca199ba047d9&rid=giphy.webp" />--> 
+                </div>
+            </div>
+</body>
+</html>
